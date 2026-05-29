@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIME LESS STORE PRO</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+<div class="logo">TIME <span>LESS</span></div>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Rechercher...">
+<button>🔍</button>
+</div>
+
+<div class="top-actions">
+<div class="admin-btn" onclick="openAdmin()">ADMIN</div>
+<div class="cart-btn" onclick="toggleCart()">🛒 Panier (<span id="cart-count">0</span>)</div>
+</div>
+</header>
+
+<section class="hero">
+<div>
+<h1>TIME LESS STORE</h1>
+<p>Le luxe à portée de main</p>
+</div>
+</section>
+
+<section class="products-section">
+<h2 class="section-title">Produits</h2>
+<div class="products" id="products"></div>
+</section>
+
+<div class="cart-panel" id="cartPanel">
+<div class="cart-header">
+<h2>Panier</h2>
+<div class="close-cart" onclick="toggleCart()">×</div>
+</div>
+
+<div id="cart-items"></div>
+
+<div class="total">Total : <span id="total">0</span> FCFA</div>
+
+<button class="checkout" onclick="checkout()">Commander</button>
+</div>
+
+<div class="admin-panel" id="adminPanel">
+<div class="admin-box">
+<h2>Admin</h2>
+
+<input type="password" id="adminPassword" placeholder="Code">
+<button onclick="loginAdmin()">Connexion</button>
+
+<hr>
+
+<input id="productName" placeholder="Nom">
+<input id="productPrice" type="number" placeholder="Prix">
+<input id="productImage" placeholder="Image URL">
+
+<button onclick="addProduct()">Ajouter</button>
+
+<br><br>
+
+<button onclick="closeAdmin()" style="background:red;">Fermer</button>
+</div>
+</div>
+
+<footer>© 2026 TIME LESS STORE</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
